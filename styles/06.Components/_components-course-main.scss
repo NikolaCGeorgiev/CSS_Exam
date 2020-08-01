@@ -1,0 +1,135 @@
+@import "../01.Settings/settings-colors";
+@import "../01.Settings/settings-breakpoints";
+
+.c-course {
+    display: grid;
+    grid-template-rows: 302px auto auto 750px auto auto;
+
+    @include for-desktop-up {
+        grid-template-rows: 302px auto auto 560px auto auto;
+    }
+    gap: 90px;
+    // background-color: $grey-100;
+
+    &__header-wrapper {
+        background-color: $blue-400;        
+
+        .c-course__header {        
+            text-align: center;
+            color: $white;
+        }
+    }    
+
+    &__description {
+        display: grid;
+        grid-template-rows: 1fr 190px;
+        row-gap: 16px;
+
+        &__video-wrapper {
+            height: 190px;
+            width: 335px;
+
+            @include for-tablet-portrait-up {
+                justify-self: center;
+            }
+
+            @include for-desktop-up {
+                height: 248px;
+                width: 440px;
+            }
+    
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        @include for-desktop-up {
+            grid-template-columns: 1fr 440px;
+            grid-template-rows: 1fr;
+            column-gap: 110px;
+            align-items: center;
+        }
+    }
+
+    &__requirements {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 74px;
+
+        @include for-tablet-landscape-up {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            gap: 90px;
+            align-items: center;
+        }
+    }  
+
+    &__program-wrapper {
+        background: url("../../assets/common/background.svg") no-repeat;
+        background-size: cover;
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+
+        .c-course__program__img {
+            display: none;
+        }
+            
+        @include for-tablet-landscape-up {
+            .c-course__program {
+                display: grid;
+                grid-template-columns: 1fr 440px;
+                column-gap: 110px;
+                align-items: center;
+                justify-items: center;
+
+                &__img {
+                    margin-bottom: 20px;
+                    align-self: flex-end;
+                    display: block;
+                }
+            }
+        }        
+    }
+
+    &__certificate {
+        display: none;        
+
+        @include for-tablet-landscape-up {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 90px;
+            align-items: center;
+            justify-items: center;
+
+            &__descripton {
+                align-self: center;
+            }
+            
+            &__image-wrapper {
+                height: 255px;
+                width: 365px;
+                background-color: $grey-300;
+                border-radius: 12px;
+                box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
+    
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+
+    &__more-info {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+
+        @include for-tablet-landscape-up {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            gap: 90px;
+            align-items: center;
+        }
+    }
+}

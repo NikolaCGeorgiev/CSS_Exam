@@ -1,0 +1,30 @@
+@import "../01.Settings/settings-breakpoints";
+
+.o-card {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    column-gap: 35px;
+    row-gap: 16px;
+    align-self: flex-start;
+    grid-template-areas: "icon title"
+                         "content content";
+
+    @include for-tablet-landscape-up {
+        grid-template-areas: "icon title"
+                             ". content";
+    }
+
+    &__icon {
+        grid-area: icon;
+    }
+    
+    &__title {
+        margin: 0;
+        grid-area: title;
+    }
+    
+    &__content {        
+        grid-area: content;
+    }
+}
+

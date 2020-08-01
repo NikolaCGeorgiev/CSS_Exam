@@ -277,4 +277,291 @@ Add the correct display in Chrome and Safari.
 summary {
   display: list-item;
 }
+
+select {
+  text-align: start;
+  background: #FFFFFF;
+  border: none;
+  border-radius: 6px;
+  min-width: 335px;
+  min-height: 52px;
+  color: #565656;
+}
+
+select:hover {
+  cursor: pointer;
+}
+
+.body-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 74px auto 312px;
+      grid-template-rows: 74px auto 312px;
+  row-gap: 5px;
+}
+
+.horizontally-center {
+  margin: 0px 5%;
+}
+
+.o-card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 32px 1fr;
+      grid-template-columns: 32px 1fr;
+  -webkit-column-gap: 35px;
+          column-gap: 35px;
+  row-gap: 16px;
+  align-self: flex-start;
+      grid-template-areas: "icon title" "content content";
+}
+
+@media (min-width: 900px) {
+  .o-card {
+        grid-template-areas: "icon title" ". content";
+  }
+}
+
+.o-card__icon {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: icon;
+}
+
+.o-card__title {
+  margin: 0;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: title;
+}
+
+.o-card__content {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: content;
+}
+
+.o-option {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 44px;
+      grid-template-columns: 1fr 44px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 16px;
+  background: #FFFFFF;
+  border: none;
+  border-radius: 6px;
+  min-width: 335px;
+  min-height: 52px;
+  color: #565656;
+}
+
+.o-option p {
+  padding-left: 14px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.o-option img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.o-option:hover {
+  cursor: pointer;
+}
+
+.c-course {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 302px auto auto 750px auto auto;
+      grid-template-rows: 302px auto auto 750px auto auto;
+  gap: 90px;
+}
+
+@media (min-width: 1200px) {
+  .c-course {
+    -ms-grid-rows: 302px auto auto 560px auto auto;
+        grid-template-rows: 302px auto auto 560px auto auto;
+  }
+}
+
+.c-course__header-wrapper {
+  background-color: #44A9F8;
+}
+
+.c-course__header-wrapper .c-course__header {
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.c-course__description {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 190px;
+      grid-template-rows: 1fr 190px;
+  row-gap: 16px;
+}
+
+.c-course__description__video-wrapper {
+  height: 190px;
+  width: 335px;
+}
+
+@media (min-width: 600px) {
+  .c-course__description__video-wrapper {
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .c-course__description__video-wrapper {
+    height: 248px;
+    width: 440px;
+  }
+}
+
+.c-course__description__video-wrapper img {
+  height: 100%;
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .c-course__description {
+    -ms-grid-columns: 1fr 440px;
+        grid-template-columns: 1fr 440px;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    -webkit-column-gap: 110px;
+            column-gap: 110px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.c-course__requirements {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  row-gap: 74px;
+}
+
+@media (min-width: 900px) {
+  .c-course__requirements {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    gap: 90px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.c-course__program-wrapper {
+  background: url("../../assets/common/background.svg") no-repeat;
+  background-size: cover;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.c-course__program-wrapper .c-course__program__img {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .c-course__program-wrapper .c-course__program {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 440px;
+        grid-template-columns: 1fr 440px;
+    -webkit-column-gap: 110px;
+            column-gap: 110px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-items: center;
+  }
+  .c-course__program-wrapper .c-course__program__img {
+    margin-bottom: 20px;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    display: block;
+  }
+}
+
+.c-course__certificate {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .c-course__certificate {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 90px;
+            column-gap: 90px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-items: center;
+  }
+  .c-course__certificate__descripton {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .c-course__certificate__image-wrapper {
+    height: 255px;
+    width: 365px;
+    background-color: #D6D6D6;
+    border-radius: 12px;
+    -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.c-course__more-info {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+}
+
+@media (min-width: 900px) {
+  .c-course__more-info {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    gap: 90px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 /*# sourceMappingURL=styles.css.map */
