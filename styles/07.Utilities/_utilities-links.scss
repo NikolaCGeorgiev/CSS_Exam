@@ -1,0 +1,13 @@
+@import "../01.Settings/settings-colors";
+
+.header-link {
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: $grey-700;    
+
+    &:hover {
+        color: $secondary-800;
+    }
+}

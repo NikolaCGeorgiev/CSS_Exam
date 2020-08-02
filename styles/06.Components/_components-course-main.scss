@@ -4,15 +4,16 @@
 .c-course {
     display: grid;
     grid-template-rows: 302px auto auto 750px auto auto;
+    row-gap: 90px;
+    
+    // background-color: $grey-100;
 
     @include for-desktop-up {
         grid-template-rows: 302px auto auto 560px auto auto;
     }
-    gap: 90px;
-    // background-color: $grey-100;
 
     &__header-wrapper {
-        background-color: $blue-400;        
+        background-color: $blue-400;  
 
         .c-course__header {        
             text-align: center;
@@ -47,7 +48,7 @@
         @include for-desktop-up {
             grid-template-columns: 1fr 440px;
             grid-template-rows: 1fr;
-            column-gap: 110px;
+            column-gap: 90px;
             align-items: center;
         }
     }
@@ -79,8 +80,8 @@
         @include for-tablet-landscape-up {
             .c-course__program {
                 display: grid;
-                grid-template-columns: 1fr 440px;
-                column-gap: 110px;
+                grid-template-columns: 1fr 400px;
+                column-gap: 90px;
                 align-items: center;
                 justify-items: center;
 

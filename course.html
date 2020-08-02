@@ -10,9 +10,57 @@
 </head>
 
 <body class="body-grid">
-    <header class="header">
-        <h1>header</h1>
+    <header class="header-wrapper">
+        <div class="header horizontally-center">
+            <section class="header__logo">
+                <svg class="header__logo__arrow" width="12" height="20" viewBox="0 0 12 20" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M1.38355e-07 18.6523L8.94767e-07 1.34765C9.47143e-07 0.149415 1.53275 -0.450644 2.42915 0.396621L11.5832 9.04896C12.1389 9.57417 12.1389 10.4258 11.5832 10.951L2.42915 19.6033C1.53275 20.4507 8.5979e-08 19.8506 1.38355e-07 18.6523Z"
+                        fill="#FF9100" />
+                </svg>
+                <article class="header__logo--horizontal">
+                    <img src="./assets/icons/logo-horizontal.svg" alt="Logo">
+                </article>
+                <article class="header__logo--vertical">
+                    <img src="./assets/icons/logo-vertical.svg" alt="Logo">
+                </article>
+            </section>
+            <section class="header__navbar">
+                <ul class="navbar__items">
+                    <li class="navbar__item">
+                        <a class="header-link" href="#">Oбучения</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="header-link" href="#">Събития</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="header-link" href="#">Преподаватели</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="header-link" href="#">Блог</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="header-link" href="#">Контакти</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="">
+                            <img src="./assets/icons/search.svg" alt="Search">
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section class="header__login">
+                <button class="btn btn--secondary">
+                    вход
+                </button>
+                <a class="header__login__menu">
+                    <img src="./assets/icons/menu.svg" alt="">
+                </a>
+            </section>
+        </div>
     </header>
+
     <main class="c-course">
         <div class="c-course__header-wrapper">
             <section class="c-course__header horizontally-center">
@@ -21,40 +69,53 @@
             </section>
         </div>
         <section class="c-course__description horizontally-center">
-                <article>
-                    <p>Това е втора част към онлайн обучението „Първи стъпки в програмирането”, който е първият и основополагащ онлайн модул по време на обучението по програмиране на SoftUni Kids. Той е насочен към изграждане на основни компетенции и умения, необходими на децата, за да продължат обучението си в следващи модули от програмата ни за малки програмисти. Първо ниво в направление софтуерни курсове се смята за преминато, след завършване и на двете части от курса и получен сертификат.</p>
-                    <p>По време на курса "Първи стъпки в програмирането - част 2", децата получават знания за видовете цикъл, събития, а също така се учат на активно общуване в група и работа в екип – принципи, които са заложени в цялостната програма на обучението по програмиране на SoftUni Kids.</p>
-                    <p>Курсът завършва със създаване на сценарии, които са измислени, съставени и програмирани от децата. В последния ден на занятията родителите са добре дошли в последния половин час, за да видят и презентацията на създадената от децата им програма! След завършване на втората част от курса, децата получават и своите сертификати за успешно преминато първо ниво „Първи стъпки в програмирането“. </p>
-                </article>
-                <article class="c-course__description__video-wrapper">
-                    <img src="./assets/images/video-img.png" alt="">
-                </article>
+            <article>
+                <p>Това е втора част към онлайн обучението „Първи стъпки в програмирането”, който е първият и
+                    основополагащ онлайн модул по време на обучението по програмиране на SoftUni Kids. Той е насочен към
+                    изграждане на основни компетенции и умения, необходими на децата, за да продължат обучението си в
+                    следващи модули от програмата ни за малки програмисти. Първо ниво в направление софтуерни курсове се
+                    смята за преминато, след завършване и на двете части от курса и получен сертификат.</p>
+                <p>По време на курса "Първи стъпки в програмирането - част 2", децата получават знания за видовете
+                    цикъл, събития, а също така се учат на активно общуване в група и работа в екип – принципи, които са
+                    заложени в цялостната програма на обучението по програмиране на SoftUni Kids.</p>
+                <p>Курсът завършва със създаване на сценарии, които са измислени, съставени и програмирани от децата. В
+                    последния ден на занятията родителите са добре дошли в последния половин час, за да видят и
+                    презентацията на създадената от децата им програма! След завършване на втората част от курса, децата
+                    получават и своите сертификати за успешно преминато първо ниво „Първи стъпки в програмирането“. </p>
+            </article>
+            <article class="c-course__description__video-wrapper">
+                <img src="./assets/images/video-img.png" alt="">
+            </article>
         </section>
         <section class="c-course__requirements horizontally-center">
             <article class="o-card">
                 <img class="o-card__icon" src="./assets/icons/people.svg" alt="">
                 <h2 class="o-card__title">За кого е подходящ?</h2>
-                <div  class="o-card__content">
-                    <p>Онлайн курсът е подходящ <strong>за напълно начинаещи</strong>: необходимо е децата да могат да четат и пишат и да имат достъп до компютър с интернет връзка.</p>
-                </div>                
+                <div class="o-card__content">
+                    <p>Онлайн курсът е подходящ <strong>за напълно начинаещи</strong>: необходимо е децата да могат да
+                        четат и пишат и да имат достъп до компютър с интернет връзка.</p>
+                </div>
             </article>
             <!-- <img src="./assets/common/border.svg" alt=""> -->
             <article class="o-card">
                 <img class="o-card__icon" src="./assets/icons/notification.svg" alt="">
-                <h2 class="o-card__title">Важно!</h2> 
+                <h2 class="o-card__title">Важно!</h2>
                 <div class="o-card__content">
-                    <p>При записване на второ дете (братче/сестриче) получавате <strong>20% отстъпка</strong> от таксата за второто дете.</p>
+                    <p>При записване на второ дете (братче/сестриче) получавате <strong>20% отстъпка</strong> от таксата
+                        за второто дете.</p>
                     <p>Занятията стартират при сформиране на група.</p>
                 </div>
             </article>
         </section>
         <div class="c-course__program-wrapper">
-            <section class="c-course__program horizontally-center">   
+            <section class="c-course__program horizontally-center">
                 <article class="c-course__program__main o-card">
-                    <img class="o-card__icon" src="./assets/icons/book.svg" alt="">         
-                    <h2 class="o-card__title">Програма на обучението</h2>            
+                    <img class="o-card__icon" src="./assets/icons/book.svg" alt="">
+                    <h2 class="o-card__title">Програма на обучението</h2>
                     <div class="o-card__content">
-                        <p>През цялото време на курса ще имаме постоянна двустранна комуникация с децата. Ще имат възможност да ни задават въпроси и да общуват помежду си (най-вече в почивките и след занятия). Ще се забавляваме докато учим как да прогамираме.</p>                        
+                        <p>През цялото време на курса ще имаме постоянна двустранна комуникация с децата. Ще имат
+                            възможност да ни задават въпроси и да общуват помежду си (най-вече в почивките и след
+                            занятия). Ще се забавляваме докато учим как да прогамираме.</p>
                         <p><strong>занятия</strong></p>
                         <div class="o-option">
                             <p>1. Цикли и безкрайни цикли</p>
@@ -71,18 +132,19 @@
                         <div class="o-option">
                             <p>4. Работа по финален проект и презентирането му.</p>
                             <img src="./assets/icons/arrow_down.svg" alt="">
-                        </div>   
+                        </div>
                     </div>
                 </article>
                 <img class="c-course__program__img" src="./assets/icons/program.svg" alt="">
-            </section>    
+            </section>
         </div>
         <section class="c-course__certificate horizontally-center">
             <article class="c-course__certificate__descripton o-card">
                 <img class="o-card__icon" src="./assets/icons/reward.svg" alt="">
                 <h2 class="o-card__title">Сертификат</h2>
                 <div class="o-card__content">
-                    <p>Да се опише максимално подробно <strong>кога</strong> и <strong>къде</strong> се провеждат занятията. За примера съм изпозлвал описание от онлайн курс</p>
+                    <p>Да се опише максимално подробно <strong>кога</strong> и <strong>къде</strong> се провеждат
+                        занятията. За примера съм изпозлвал описание от онлайн курс</p>
                 </div>
             </article>
             <article class="c-course__certificate__image-wrapper">
@@ -94,25 +156,36 @@
                 <img class="o-card__icon" src="./assets/icons/clock.svg" alt="">
                 <h2 class="o-card__title">Кога и къде се провеждат занятията?</h2>
                 <div class="o-card__content">
-                    <p>Да се опише максимално подробно <strong>кога</strong> и <strong>къде</strong> се провеждат занятията. За примера съм изпозлвал описание от онлайн курс.</p>
-                    <p>Курсът е в <strong>ОНЛАЙН ФОРМАТ</strong>. Обучението се провежда в рамките на <strong>2 астрономически часa</strong>, веднъж седмично в продължение на <strong>4 седмици</strong>.</p>
-                    <p>Денят и часа зависят от групата, в която запишете детето си. Занятията ще се проведат в онлайн платформа, за която ще получите линк преди занятието, с който да достъпите виртуалната ни класна стая.</p>
+                    <p>Да се опише максимално подробно <strong>кога</strong> и <strong>къде</strong> се провеждат
+                        занятията. За примера съм изпозлвал описание от онлайн курс.</p>
+                    <p>Курсът е в <strong>ОНЛАЙН ФОРМАТ</strong>. Обучението се провежда в рамките на <strong>2
+                            астрономически часa</strong>, веднъж седмично в продължение на <strong>4 седмици</strong>.
+                    </p>
+                    <p>Денят и часа зависят от групата, в която запишете детето си. Занятията ще се проведат в онлайн
+                        платформа, за която ще получите линк преди занятието, с който да достъпите виртуалната ни класна
+                        стая.</p>
                     <p><strong>Крайният срок за записване е 05/06/2020, 23:59 часа включително.</strong></p>
-                </div>                
+                </div>
             </article>
             <!-- <img src="./assets/common/border.svg" alt=""> -->
             <article class="o-card">
                 <img class="o-card__icon" src="./assets/icons/innovation.svg" alt="">
-                <h2 class="o-card__title">Допълнителна информация</h2> 
+                <h2 class="o-card__title">Допълнителна информация</h2>
                 <div class="o-card__content">
-                    <p>В деня на първото занятие на вашето дете ще имаме нужда от <strong>два подписани и попълнени екземпляра на договор</strong> за обучение в SoftUni Kids. Ще получите договора на имейл адреса ви, след заплащането на обучението. Може да го разгледате от тук.</p>  
-                    <p>За успешното провеждане на занятията трябва да осигурите на детето си <strong>компютър, интернет връзка и спокойна среда за работа</strong>. За по-лесна комуникация ще получите достъп до група в социалните мрежи, където преподавателите ще помагат на децата при затруднения в достъпа до виртуалната ни класна стая.</p>
+                    <p>В деня на първото занятие на вашето дете ще имаме нужда от <strong>два подписани и попълнени
+                            екземпляра на договор</strong> за обучение в SoftUni Kids. Ще получите договора на имейл
+                        адреса ви, след заплащането на обучението. Може да го разгледате от тук.</p>
+                    <p>За успешното провеждане на занятията трябва да осигурите на детето си <strong>компютър, интернет
+                            връзка и спокойна среда за работа</strong>. За по-лесна комуникация ще получите достъп до
+                        група в социалните мрежи, където преподавателите ще помагат на децата при затруднения в достъпа
+                        до виртуалната ни класна стая.</p>
                     <p>Почивен ден за групите - няма.</p>
                     <p><strong>Запазването на място става единствено след успешно заплащане.</strong></p>
                 </div>
-            </article> 
+            </article>
         </section>
     </main>
+
     <footer class="footer">
         <h1>footer</h1>
     </footer>
