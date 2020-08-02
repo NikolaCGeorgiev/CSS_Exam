@@ -132,5 +132,9 @@
             gap: 90px;
             align-items: center;
         }
+
+        @include for-desktop-up {
+            margin-bottom: 150px;
+        }
     }
 }

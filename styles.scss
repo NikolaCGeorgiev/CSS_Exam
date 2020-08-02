@@ -1,6 +1,6 @@
-@import "./styles/01.Settings/settings-typography";
-
 @import "./styles/03.Generic/generic-normalize";
+
+@import "./styles/01.Settings/settings-typography";
 
 @import "./styles/04.Elements/elements-lists";
 @import "./styles/04.Elements/elements-links";
@@ -12,6 +12,7 @@
 
 @import "./styles/06.Components/components-header";
 @import "./styles/06.Components/components-course-main";
+@import "./styles/06.Components/components-footer";
 @import "./styles/06.Components/components-button";
 
 @import "./styles/07.Utilities/utilities-links";
