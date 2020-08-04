@@ -4,7 +4,11 @@
 }
 
 .horizontally-center {
-    margin: 0 5%;
-    // max-width: 1290px;
-    // margin: 0px auto;
+    margin: 0 5.4%;
+    min-width: 335px;
+    max-width: 1290px;
+
+    @media only screen and  (min-width: 1440px) {
+        margin: 0 auto;
+    }
 }
