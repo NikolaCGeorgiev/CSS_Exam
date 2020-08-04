@@ -13,6 +13,11 @@ Use a better box model (opinionated).
           box-sizing: border-box;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+}
+
 /**
 Use a more readable tab size (opinionated).
 */
@@ -292,7 +297,7 @@ a:hover {
   cursor: pointer;
 }
 
-.body-grid {
+.o-page-wrapper {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 74px auto auto;
@@ -300,7 +305,7 @@ a:hover {
 }
 
 .horizontally-center {
-  margin: 0px 5%;
+  margin: 0 5%;
 }
 
 .o-card {
@@ -339,6 +344,56 @@ a:hover {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: content;
+}
+
+.o-trainer-card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: min-content;
+      grid-template-rows: -webkit-min-content;
+      grid-template-rows: min-content;
+  row-gap: 24px;
+  justify-items: center;
+}
+
+.o-trainer-card__img-wrapper {
+  width: 188px;
+  height: 188px;
+  border: 8px solid #41BEAD;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.o-trainer-card__img-wrapper img {
+  height: 100%;
+  width: 100%;
+}
+
+.o-trainer-card__header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: min-content;
+      grid-template-rows: -webkit-min-content;
+      grid-template-rows: min-content;
+  row-gap: 8px;
+  justify-items: center;
+}
+
+.o-trainer-card__header__title {
+  color: #41BEAD;
+  font-weight: bold;
+}
+
+.o-trainer-card__header__position {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #B2B2B2;
+}
+
+.o-trainer-card__description {
+  color: #565656;
 }
 
 .o-option {
@@ -684,13 +739,123 @@ a:hover {
   }
 }
 
-.footer--wrapper {
+.c-trainers {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: min-content;
+      grid-template-rows: -webkit-min-content;
+      grid-template-rows: min-content;
+  row-gap: 48px;
+}
+
+.c-trainers__header-wrapper {
+  background-color: #FFB402;
+}
+
+.c-trainers__header-wrapper .c-trainers__header {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 24px;
+  justify-items: center;
+  text-align: center;
+  margin-top: 64px;
+  margin-bottom: 64px;
+  color: #FFFFFF;
+}
+
+.c-trainers__description {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: min-content;
+      grid-template-rows: -webkit-min-content;
+      grid-template-rows: min-content;
+  row-gap: 64px;
+}
+
+.c-trainers__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: min-content;
+      grid-template-rows: -webkit-min-content;
+      grid-template-rows: min-content;
+  row-gap: 48px;
+  margin-bottom: 44px;
+}
+
+.c-trainers__apply-form-wrapper {
+  background-color: #66B9F8;
+}
+
+.c-trainers__apply-form-wrapper::before {
+  content: '';
+  background: #92CDFB;
+  width: 100%;
+  height: 12px;
+  display: inline-block;
+  position: relative;
+  top: -12px;
+}
+
+.c-trainers__apply-form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: min-content;
+      grid-template-rows: -webkit-min-content;
+      grid-template-rows: min-content;
+  row-gap: 48px;
+  margin-top: 64px;
+  margin-bottom: 64px;
+  color: #FFFFFF;
+}
+
+.c-trainers__apply-form__head {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: min-content;
+      grid-template-rows: -webkit-min-content;
+      grid-template-rows: min-content;
+  row-gap: 24px;
+}
+
+.c-trainers__apply-form__form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: min-content;
+      grid-template-rows: -webkit-min-content;
+      grid-template-rows: min-content;
+  row-gap: 36px;
+}
+
+.c-trainers__apply-form__form__item {
+  padding: 16px 0 16px 16px;
+  background: transparent;
+  border: 1px solid #FFFFFF;
+  border-radius: 6px;
+}
+
+.c-trainers__apply-form__form__item::-webkit-input-placeholder {
+  color: #FFFFFF;
+}
+
+.c-trainers__apply-form__form__item:-ms-input-placeholder {
+  color: #FFFFFF;
+}
+
+.c-trainers__apply-form__form__item::-ms-input-placeholder {
+  color: #FFFFFF;
+}
+
+.c-trainers__apply-form__form__item::placeholder {
+  color: #FFFFFF;
+}
+
+.footer-wrapper {
   position: relative;
   background-color: #565656;
   min-height: 312px;
 }
 
-.footer--wrapper::before {
+.footer-wrapper::before {
   content: '';
   background: #919191;
   width: 100%;

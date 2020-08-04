@@ -1,3 +1,10 @@
+.o-page-wrapper {
+    display: grid;
+    grid-template-rows: 74px auto auto ;
+}
+
 .horizontally-center {
-    margin: 0px 5%;
+    margin: 0 5%;
+    // max-width: 1290px;
+    // margin: 0px auto;
 }
