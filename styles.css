@@ -308,14 +308,14 @@ a:hover {
       grid-template-rows: 74px auto auto;
 }
 
-.horizontally-center {
+.o-horizontally-center {
   margin: 0 5.4%;
   min-width: 335px;
   max-width: 1290px;
 }
 
 @media only screen and (min-width: 1440px) {
-  .horizontally-center {
+  .o-horizontally-center {
     margin: 0 auto;
   }
 }
@@ -442,6 +442,42 @@ a:hover {
   cursor: pointer;
 }
 
+@media only screen and (max-width: 599px) {
+  .o-hidden-max-phone {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .o-hidden-min-tablet-portrait-up {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 899px) {
+  .o-hidden-max-tablet-portrait-up {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .o-hidden-min-tablet-landscape-up {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .o-hidden-max-tablet-landscape-up {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .o-hidden-min-desktop-up {
+    display: none;
+  }
+}
+
 .header-wrapper {
   position: relative;
   -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 1px 5px rgba(0, 0, 0, 0.2);
@@ -478,23 +514,6 @@ a:hover {
   .header__logo__arrow path {
     fill: #FF9100;
   }
-}
-
-.header__logo--horizontal {
-  display: none;
-}
-
-@media (min-width: 1200px) {
-  .header__logo--horizontal {
-    display: block;
-  }
-  .header__logo--vertical {
-    display: none;
-  }
-}
-
-.header__navbar {
-  display: none;
 }
 
 @media (min-width: 900px) {
@@ -550,9 +569,6 @@ a:hover {
   .header__login {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-  }
-  .header__login__menu {
-    display: none;
   }
 }
 

@@ -11,7 +11,7 @@
 
 <body class="o-page-wrapper">
     <header class="header-wrapper">
-        <div class="header horizontally-center">
+        <div class="header o-horizontally-center">
             <section class="header__logo">
                 <svg class="header__logo__arrow" width="12" height="20" viewBox="0 0 12 20" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -19,14 +19,14 @@
                         d="M1.38355e-07 18.6523L8.94767e-07 1.34765C9.47143e-07 0.149415 1.53275 -0.450644 2.42915 0.396621L11.5832 9.04896C12.1389 9.57417 12.1389 10.4258 11.5832 10.951L2.42915 19.6033C1.53275 20.4507 8.5979e-08 19.8506 1.38355e-07 18.6523Z"
                         fill="#FF9100" />
                 </svg>
-                <article class="header__logo--horizontal">
+                <article class="header__logo--horizontal o-hidden-max-tablet-landscape-up">
                     <img src="./assets/icons/logo-horizontal.svg" alt="Logo">
                 </article>
-                <article class="header__logo--vertical">
+                <article class="header__logo--vertical o-hidden-min-desktop-up">
                     <img src="./assets/icons/logo-vertical.svg" alt="Logo">
                 </article>
             </section>
-            <nav class="header__navbar">
+            <nav class="header__navbar o-hidden-max-tablet-portrait-up">
                 <ul class="navbar__items">
                     <li class="navbar__item">
                         <a class="header-link" href="./course.html">Oбучения</a>
@@ -54,7 +54,7 @@
                 <button class="btn btn--secondary">
                     вход
                 </button>
-                <a class="header__login__menu">
+                <a class="header__login__menu o-hidden-min-tablet-landscape-up">
                     <img src="./assets/icons/menu.svg" alt="">
                 </a>
             </section>
@@ -187,7 +187,7 @@
     </main>
 
     <footer class="footer-wrapper">
-        <div class="footer horizontally-center">
+        <div class="footer o-horizontally-center">
             <section class="footer__img">
                 <img src="" alt="">
                 <img class="footer__img__icon" src="./assets/icons/pawn.svg" alt="pawn">

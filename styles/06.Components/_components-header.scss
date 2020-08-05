@@ -24,25 +24,9 @@
                 fill: $secondary-800;
             }
         }
-
-        &--horizontal {
-            display: none;
-        }
-
-        @include for-desktop-up {
-            &--horizontal {
-                display: block;
-            }
-
-            &--vertical {
-                display: none;
-            }
-        }
     }
 
     &__navbar {
-        display: none;
-
         @include for-tablet-landscape-up {
             display: grid;
             grid-template-columns: auto;
@@ -76,10 +60,6 @@
 
         @include for-tablet-landscape-up {
             grid-template-columns: 1fr;
-
-            &__menu {
-                display: none;
-            }
         }
     }
 }

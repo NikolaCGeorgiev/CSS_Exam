@@ -1,0 +1,35 @@
+.o-hidden-max-phone {
+    @media only screen and  (max-width: 599px) {
+        display: none;
+    }
+}
+
+.o-hidden-min-tablet-portrait-up {
+    @media only screen and  (min-width: 600px) {
+        display: none;
+    }
+}
+
+.o-hidden-max-tablet-portrait-up {
+    @media only screen and  (max-width: 899px) {
+        display: none;
+    }
+}
+
+.o-hidden-min-tablet-landscape-up {
+    @media only screen and  (min-width: 900px) {
+        display: none;
+    }
+}
+
+.o-hidden-max-tablet-landscape-up {
+    @media only screen and  (max-width: 1199px) {
+        display: none;
+    }
+}
+
+.o-hidden-min-desktop-up {
+    @media only screen and  (min-width: 1200px) {
+        display: none;
+    }
+}
