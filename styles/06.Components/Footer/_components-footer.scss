@@ -1,0 +1,53 @@
+@import "../../01.Settings/settings-colors";
+
+.footer-wrapper {
+    position: relative;
+    background-color: $grey-700;
+
+    &::before {
+        content: '';
+        background: $grey-500;
+        width: 100%;
+        height: 12px;
+        display: inline-block;
+        position: relative;
+        top: -12px;
+    }
+}
+
+.c-footer {
+    display: grid;
+    grid-template-rows: auto auto;
+    row-gap: 32px;
+
+    @include for-desktop-up {
+        grid-template-columns: 220px 1fr;
+        row-gap: 0;
+        column-gap: 85px;
+
+        &__img {
+
+            &__pawn{                
+                position: absolute;
+                bottom: 0;
+            }
+        }
+    }
+
+    &__main {
+        margin-top: 44px;
+
+        &__navs {
+            display: grid;
+            grid-template-rows: auto auto;
+            row-gap: 32px;
+            grid-auto-flow: column;
+
+            @include for-tablet-landscape-up {
+                grid-template-columns: auto auto auto auto;
+                grid-auto-flow: unset;
+                column-gap: 85px;
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.c-footer__navigation {
+    display: grid;
+    grid-template-rows: min-content min-content;
+    row-gap: 16px;
+
+    &__title {
+        color: $white;
+        font-weight: bold;
+    }
+
+    &__main {
+        display: grid;
+        grid-template-rows: auto;
+        row-gap: 12px;
+
+        @include for-desktop-up {
+            grid-template-rows: auto auto auto auto auto;
+            grid-auto-flow: column;
+            column-gap: 24px;
+        }        
+    }
+
+    &__icons {
+        display: grid;
+        grid-template-columns: min-content min-content;
+        column-gap: 30px;
+    }
+}
