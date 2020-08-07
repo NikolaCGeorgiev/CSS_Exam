@@ -1,0 +1,11 @@
+@import "../../01.Settings/settings-colors";
+
+.c-work-days {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    column-gap: 24px;
+    
+    &__time {
+        color: $secondary-800;
+    }
+}

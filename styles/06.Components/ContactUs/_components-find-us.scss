@@ -1,0 +1,28 @@
+@import "../../01.Settings/settings-colors";
+
+.c-find-us {
+    display: grid;
+    grid-template-rows: auto auto;
+    row-gap: 32px;
+
+    &__main {
+        display: grid;
+        grid-template-rows: auto;
+        row-gap: 48px;
+
+        &__item {
+            display: grid;
+            grid-template-rows: auto;
+            row-gap: 18px;
+
+            &__title {
+                font-weight: 600;
+                color: $primary-300;
+            }
+        }
+    }
+
+    &__btn {
+        justify-self: center;
+    }
+}

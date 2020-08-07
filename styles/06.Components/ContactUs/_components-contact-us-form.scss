@@ -1,0 +1,28 @@
+@import "../../01.Settings/settings-colors";
+
+.c-contact-us-form {
+    display: grid;
+    grid-template-rows: auto;
+    row-gap: 32px;
+    max-width: 850px;
+    margin: 0 auto;
+
+    &__title {
+        color: $primary-300;
+        justify-self: center;
+    }
+
+    &__input {
+        padding: 16px 0 16px 16px;
+        border: 1px solid $grey-500;
+        border-radius: 6px;
+
+        &::placeholder {
+            color: $grey-500;
+        }
+    }
+
+    &__btn {
+        justify-self: start;
+    }
+}

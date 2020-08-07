@@ -1,0 +1,41 @@
+@import "../../01.Settings/settings-colors";
+@import "../../01.Settings/settings-breakpoints";
+
+.c-contact-us {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    row-gap: 96px;
+
+    &__map {       
+        width: 100%;
+        height: auto;
+    }
+
+    &__transport-wrapper {
+        background-color: $secondary-50;
+    }
+
+    &__transport {
+        display: grid;
+        grid-template-rows: auto;
+        row-gap: 48px;
+        margin-top: 96px;
+        margin-bottom: 96px;
+
+        &__header {
+            color: $primary-300;
+            text-align: center;
+        }
+
+        &__item {
+            display: grid;
+            grid-template-rows: auto;
+            row-gap: 16px;
+
+            &__title {
+                color: $primary-300;
+                margin-bottom: 2px;
+            }
+        }
+    }
+}
