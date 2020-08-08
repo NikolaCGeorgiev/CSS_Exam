@@ -4,8 +4,16 @@
     display: grid;
     grid-template-columns: max-content max-content;
     column-gap: 24px;
+
+    @include for-tablet-landscape-up {
+        grid-template-columns: max-content auto;
+
+        p {
+            max-width: 105px;
+        }
+    }
     
     &__time {
         color: $secondary-800;
-    }
+    }    
 }
