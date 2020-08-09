@@ -38,10 +38,12 @@
     @include for-tablet-landscape-up {      
         grid-template-rows: 270px min-content;
         row-gap: 16px;  
-        max-width: 520px;
+        height: 385px;
+        width: 520px;
         padding: 32px;        
         box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
         border-radius: 12px;
         background-color: $white;
+        margin-left: 5em;
     }
 }

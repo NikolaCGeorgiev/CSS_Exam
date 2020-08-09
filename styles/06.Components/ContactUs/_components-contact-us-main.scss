@@ -22,7 +22,7 @@
 
         @include for-tablet-landscape-up {
             grid-template-rows: 128px 298px 84px;              
-            grid-template-columns: 669px 1fr;  
+            grid-template-columns: 1fr 1fr;  
             row-gap: 0; 
 
             .c-contact-us__map__img {
