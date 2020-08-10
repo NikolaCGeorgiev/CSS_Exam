@@ -1,0 +1,109 @@
+@import "../../01.Settings/settings-colors";
+@import "../../01.Settings/settings-breakpoints";
+
+.c-course {
+    display: grid;
+    grid-template-rows: min-content min-content min-content min-content min-content;
+    row-gap: 64px;
+
+    &__header-wrapper {
+        display: grid;
+        grid-template-rows: 242px 56px 506px;
+        grid-template-columns: 1fr 335px 1fr;
+
+        .c-course__header {
+            grid-row: 1 / span 2;
+            grid-column: 1 / span 3;
+            background-color: $blue-400;
+
+            &__main {
+                display: grid;
+                grid-template-rows: min-content;
+                row-gap: 24px;
+                justify-items: center;
+                text-align: center;
+                color: $white;
+
+                p {
+                    background: #FFC20A;
+                    border-radius: 4px;
+                    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);                    
+                    padding: 4px 8px;
+                    margin-top: 64px;
+                }
+
+                h1 {
+                    max-width: 644px;
+                    font-weight: bold;
+                    font-size: 30px;
+                    line-height: 36px;
+                }
+            }
+        }
+
+        .c-registration {
+            grid-row: 2 / span 2;
+            grid-column: 2 / span 1;
+            background: transparent;
+            overflow: hidden;
+        }
+    }
+
+    &__description {
+        display: grid;
+        grid-template-rows: min-content min-content;
+        row-gap: 32px;
+
+        &__main {
+            display: grid;
+            grid-template-rows: min-content;
+            row-gap: 24px;
+        }
+
+        &__video {
+            justify-self: center;
+            width: 335px;
+            height: 190px;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+
+            &__trigger {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            &__img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    &__requirements {
+        display: grid;
+        grid-template-rows: min-content;
+        row-gap: 32px;
+    }
+
+    &__program-wrapper {
+        background-color: #FFCB29;
+
+        .c-course__program__main {
+            display: grid;
+            grid-template-rows: min-content min-content;
+            row-gap: 32px;
+            margin-top: 64px;
+            margin-bottom: 64px;
+        }
+    }  
+    
+    &__more-info {
+        display: grid;
+        grid-template-rows: min-content;
+        row-gap: 32px;
+        margin-bottom: 96px;
+    }
+}

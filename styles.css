@@ -241,32 +241,45 @@ html, * {
   font-family: 'Lato', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1-like,
+.h2-like,
+.h3-like,
+.h4-like {
   font-family: 'Montserrat', sans-serif;
 }
 
-h1 {
+h1,
+.h1-like {
   font-style: normal;
   font-weight: 600;
   font-size: 36px;
   line-height: 44px;
 }
 
-h2 {
+h2,
+.h2-like {
   font-style: normal;
   font-weight: 600;
   font-size: 30px;
   line-height: 36px;
 }
 
-h3 {
+h3,
+.h3-like {
   font-style: normal;
   font-weight: 600px;
   font-size: 24px;
   line-height: 30px;
 }
 
-h4 {
+h4,
+.h4-like {
   font-style: normal;
   font-size: 20px;
   line-height: 24px;
@@ -348,6 +361,12 @@ a:hover {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: content;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: min-content;
+      grid-template-rows: -webkit-min-content;
+      grid-template-rows: min-content;
+  row-gap: 24px;
 }
 
 .o-trainer-card {
@@ -415,7 +434,7 @@ a:hover {
   font-weight: bold;
   font-size: 10px;
   line-height: 12px;
-  color: white;
+  color: #FFFFFF;
 }
 
 .o-trainer-card--primary .o-trainer-card__img-wrapper:hover .cover {
@@ -446,7 +465,16 @@ a:hover {
   }
 }
 
-.o-option {
+.o-select {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: min-content;
+      grid-template-rows: -webkit-min-content;
+      grid-template-rows: min-content;
+  row-gap: 16px;
+}
+
+.o-select__option {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 44px;
@@ -454,7 +482,6 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 16px;
   background: #FFFFFF;
   border: none;
   border-radius: 6px;
@@ -463,20 +490,20 @@ a:hover {
   color: #565656;
 }
 
-.o-option p {
+.o-select__option p {
   padding-left: 14px;
   font-weight: bold;
   font-size: 18px;
   line-height: 22px;
 }
 
-.o-option img {
+.o-select__option img {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
 }
 
-.o-option:hover {
+.o-select__option:hover {
   cursor: pointer;
 }
 
@@ -613,196 +640,222 @@ a:hover {
 .c-course {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 302px auto auto 750px auto auto;
-      grid-template-rows: 302px auto auto 750px auto auto;
-  row-gap: 90px;
-}
-
-@media (min-width: 1200px) {
-  .c-course {
-    -ms-grid-rows: 302px auto auto 560px auto auto;
-        grid-template-rows: 302px auto auto 560px auto auto;
-  }
+  -ms-grid-rows: min-content min-content min-content min-content min-content;
+      grid-template-rows: -webkit-min-content -webkit-min-content -webkit-min-content -webkit-min-content -webkit-min-content;
+      grid-template-rows: min-content min-content min-content min-content min-content;
+  row-gap: 64px;
 }
 
 .c-course__header-wrapper {
-  background-color: #44A9F8;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 242px 56px 506px;
+      grid-template-rows: 242px 56px 506px;
+  -ms-grid-columns: 1fr 335px 1fr;
+      grid-template-columns: 1fr 335px 1fr;
 }
 
 .c-course__header-wrapper .c-course__header {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / span 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 / span 3;
+  background-color: #44A9F8;
+}
+
+.c-course__header-wrapper .c-course__header__main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: min-content;
+      grid-template-rows: -webkit-min-content;
+      grid-template-rows: min-content;
+  row-gap: 24px;
+  justify-items: center;
   text-align: center;
   color: #FFFFFF;
+}
+
+.c-course__header-wrapper .c-course__header__main p {
+  background: #FFC20A;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
+  padding: 4px 8px;
+  margin-top: 64px;
+}
+
+.c-course__header-wrapper .c-course__header__main h1 {
+  max-width: 644px;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.c-course__header-wrapper .c-registration {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  grid-row: 2 / span 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / span 1;
+  background: transparent;
+  overflow: hidden;
 }
 
 .c-course__description {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr 190px;
-      grid-template-rows: 1fr 190px;
-  row-gap: 16px;
+  -ms-grid-rows: min-content min-content;
+      grid-template-rows: -webkit-min-content -webkit-min-content;
+      grid-template-rows: min-content min-content;
+  row-gap: 32px;
 }
 
-.c-course__description__video-wrapper {
-  height: 190px;
+.c-course__description__main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: min-content;
+      grid-template-rows: -webkit-min-content;
+      grid-template-rows: min-content;
+  row-gap: 24px;
+}
+
+.c-course__description__video {
+  -ms-grid-column-align: center;
+      justify-self: center;
   width: 335px;
+  height: 190px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
 }
 
-@media (min-width: 600px) {
-  .c-course__description__video-wrapper {
-    -ms-grid-column-align: center;
-        justify-self: center;
-  }
+.c-course__description__video__trigger {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
-@media (min-width: 1200px) {
-  .c-course__description__video-wrapper {
-    height: 248px;
-    width: 440px;
-  }
-}
-
-.c-course__description__video-wrapper img {
-  height: 100%;
+.c-course__description__video__img {
   width: 100%;
-}
-
-@media (min-width: 1200px) {
-  .c-course__description {
-    -ms-grid-columns: 1fr 440px;
-        grid-template-columns: 1fr 440px;
-    -ms-grid-rows: 1fr;
-        grid-template-rows: 1fr;
-    -webkit-column-gap: 90px;
-            column-gap: 90px;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
+  height: 100%;
 }
 
 .c-course__requirements {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-  row-gap: 74px;
-}
-
-@media (min-width: 900px) {
-  .c-course__requirements {
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: 1fr;
-        grid-template-rows: 1fr;
-    gap: 90px;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
+  -ms-grid-rows: min-content;
+      grid-template-rows: -webkit-min-content;
+      grid-template-rows: min-content;
+  row-gap: 32px;
 }
 
 .c-course__program-wrapper {
-  background: url("../../assets/common/background.svg") no-repeat;
-  background-size: cover;
+  background-color: #FFCB29;
+}
+
+.c-course__program-wrapper .c-course__program__main {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.c-course__program-wrapper .c-course__program__img {
-  display: none;
-}
-
-@media (min-width: 900px) {
-  .c-course__program-wrapper .c-course__program {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 400px;
-        grid-template-columns: 1fr 400px;
-    -webkit-column-gap: 90px;
-            column-gap: 90px;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    justify-items: center;
-  }
-  .c-course__program-wrapper .c-course__program__img {
-    margin-bottom: 20px;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-    display: block;
-  }
-}
-
-.c-course__certificate {
-  display: none;
-}
-
-@media (min-width: 900px) {
-  .c-course__certificate {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    -webkit-column-gap: 90px;
-            column-gap: 90px;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    justify-items: center;
-  }
-  .c-course__certificate__descripton {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-  }
-  .c-course__certificate__image-wrapper {
-    height: 255px;
-    width: 365px;
-    background-color: #D6D6D6;
-    border-radius: 12px;
-    -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
-            box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
+  -ms-grid-rows: min-content min-content;
+      grid-template-rows: -webkit-min-content -webkit-min-content;
+      grid-template-rows: min-content min-content;
+  row-gap: 32px;
+  margin-top: 64px;
+  margin-bottom: 64px;
 }
 
 .c-course__more-info {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
+  -ms-grid-rows: min-content;
+      grid-template-rows: -webkit-min-content;
+      grid-template-rows: min-content;
+  row-gap: 32px;
+  margin-bottom: 96px;
 }
 
-@media (min-width: 900px) {
-  .c-course__more-info {
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: 1fr;
-        grid-template-rows: 1fr;
-    gap: 90px;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
+.c-registration {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 144px auto 406px;
+      grid-template-rows: 144px auto 406px;
+  -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
 }
 
-@media (min-width: 1200px) {
-  .c-course__more-info {
-    margin-bottom: 150px;
-  }
+.c-registration__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #FFFFFF;
+}
+
+.c-registration__button button {
+  padding: 16px 94px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.c-registration__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  background: #FFFFFF;
+  padding-left: 24px;
+}
+
+.c-registration__list__item {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+  -ms-grid-columns: 32px auto;
+      grid-template-columns: 32px auto;
+  row-gap: 6px;
+  -webkit-column-gap: 24px;
+          column-gap: 24px;
+}
+
+.c-registration__list__item img {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / span 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / span 1;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.c-registration__list__item p {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.c-registration__list__item:not(:last-child)::after {
+  content: '';
+  width: 24px;
+  height: 2px;
+  background: #E5E5E5;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 .c-trainers {
@@ -1029,8 +1082,8 @@ a:hover {
   .c-contact-us__map-wrapper {
     -ms-grid-rows: 128px 298px 84px;
         grid-template-rows: 128px 298px 84px;
-    -ms-grid-columns: 669px 1fr;
-        grid-template-columns: 669px 1fr;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     row-gap: 0;
   }
   .c-contact-us__map-wrapper .c-contact-us__map__img {
@@ -1102,9 +1155,9 @@ a:hover {
   .c-contact-us__transport__item {
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: min-content min-content min-content min-content min-content;
-        grid-template-rows: -webkit-min-content -webkit-min-content -webkit-min-content -webkit-min-content -webkit-min-content;
-        grid-template-rows: min-content min-content min-content min-content min-content;
+    -ms-grid-rows: min-content min-content;
+        grid-template-rows: -webkit-min-content -webkit-min-content;
+        grid-template-rows: min-content min-content;
     row-gap: 16px;
   }
 }
@@ -1162,12 +1215,14 @@ a:hover {
         grid-template-rows: 270px -webkit-min-content;
         grid-template-rows: 270px min-content;
     row-gap: 16px;
-    max-width: 520px;
+    height: 385px;
+    width: 520px;
     padding: 32px;
     -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
             box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
     border-radius: 12px;
     background-color: #FFFFFF;
+    margin-left: 5em;
   }
 }
 
@@ -1412,7 +1467,28 @@ a:hover {
   position: relative;
   margin: 0;
   height: 20px;
-  background: radial-gradient(circle 10px, #DFF4F1, #DFF4F1, #FFFFFF 60%, #FFFFFF 100%) 47px 0px/20px 20px repeat-x;
+}
+
+.c-dotted-line--transparent {
+  background: radial-gradient(circle 12px, transparent, transparent 40%, #C4C4C4 60%, #fff 60%, #fff 100%) 37px 0px/20px 20px repeat;
+}
+
+.c-dotted-line--upper {
+  height: 10px;
+  background: radial-gradient(circle 12px, transparent, transparent 40%, #C4C4C4 60%, #fff 60%, #fff 100%) 43px -4px/18px 32px repeat-x;
+}
+
+.c-dotted-line--bottom {
+  height: 10px;
+  background: radial-gradient(circle 6px, #fff 100%, #fff 60%, #C4C4C4 60%, transparent, transparent 40%) 46px 1px/18px 21px repeat-x;
+}
+
+.c-dotted-line--primary-50 {
+  background: radial-gradient(circle 10px, #DFF4F1, #DFF4F1, #FFFFFF 60%, #FFFFFF 100%) 35px 0px/20px 20px repeat-x;
+}
+
+.c-dotted-line--secondary-100 {
+  background: radial-gradient(circle 10px, #FFECB3, #FFECB3, #FFFFFF 60%, #FFFFFF 100%) 35px 0px/20px 20px repeat;
 }
 
 .header-link {
@@ -1440,5 +1516,18 @@ a:hover {
 
 .footer-icon:hover path {
   fill: #41BEAD;
+}
+
+.u-bold {
+  font-weight: bold;
+}
+
+.u-heading-secondary {
+  color: #FF9100;
+}
+
+.u-p18 {
+  font-size: 18px;
+  line-height: 22px;
 }
 /*# sourceMappingURL=styles.css.map */

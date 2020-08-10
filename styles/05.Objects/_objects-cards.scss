@@ -26,6 +26,9 @@
     
     &__content {        
         grid-area: content;
+        display: grid;
+        grid-template-rows: min-content;
+        row-gap: 24px;
     }
 }
 
@@ -71,9 +74,7 @@
             color: $grey-700;
             margin-top: 16px;
         }
-    }
-
-    
+    }    
 
     &--primary {        
         .o-trainer-card__img-wrapper {
@@ -89,7 +90,7 @@
                 font-weight: bold;
                 font-size: 10px;
                 line-height: 12px;
-                color: white;
+                color: $white;
             }
 
             &:hover {

@@ -4,6 +4,26 @@
     position: relative;
     margin: 0;
     height: 20px;
-    //background: radial-gradient(circle 10px, transparent, transparent 40%, #C4C4C4 60%, #fff 60%, #fff 100%) 47px 0px/20px 20px repeat-x;
-    background: radial-gradient(circle 10px, $primary-50, $primary-50, $white 60%, $white 100%) 35px 0px/20px 20px repeat-x;
+
+    &--transparent {
+        background: radial-gradient(circle 12px, transparent, transparent 40%, #C4C4C4 60%, #fff 60%, #fff 100%) 37px 0px/20px 20px repeat;
+    }
+
+    &--upper {
+        height: 10px;
+        background: radial-gradient(circle 12px, transparent, transparent 40%, #C4C4C4 60%, #fff 60%, #fff 100%) 43px -4px/18px 32px repeat-x;
+    }
+
+    &--bottom {
+        height: 10px;
+        background: radial-gradient(circle 6px, #fff 100%, #fff 60%, #C4C4C4 60%, transparent, transparent 40%) 46px 1px/18px 21px repeat-x;
+    }
+
+    &--primary-50 {        
+        background: radial-gradient(circle 10px, $primary-50, $primary-50, $white 60%, $white 100%) 35px 0px/20px 20px repeat-x;
+    }
+
+    &--secondary-100 {        
+        background: radial-gradient(circle 10px, $secondary-100, $secondary-100, $white 60%, $white 100%) 35px 0px/20px 20px repeat;
+    }
 }

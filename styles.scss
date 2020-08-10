@@ -7,11 +7,12 @@
 
 @import "./styles/05.Objects/objects-containers";
 @import "./styles/05.Objects/objects-cards";
-@import "./styles/05.Objects/objects-option";
+@import "./styles/05.Objects/objects-select";
 @import "./styles/05.Objects/objects-hidden";
 
 @import "./styles/06.Components/components-header";
-@import "./styles/06.Components/components-course-main";
+@import "./styles/06.Components/Course/components-course-main";
+@import "./styles/06.Components/Course/components-registration";
 @import "./styles/06.Components/Trainers/components-trainers-main";
 @import "./styles/06.Components/Trainers/components-form";
 @import "./styles/06.Components/ContactUs/components-contact-us-main";
@@ -25,3 +26,4 @@
 @import "./styles/06.Components/components-dotted-line";
 
 @import "./styles/07.Utilities/utilities-links";
+@import "./styles/07.Utilities/utilities-fonts";

@@ -62,14 +62,44 @@
     </header>
 
     <main class="c-course">
-        <div class="c-course__header-wrapper">
-            <section class="c-course__header horizontally-center">
-                <p>Начинаещ</p>
-                <h2>Първи стъпки в програмирането - част 2</h2>
-            </section>
-        </div>
-        <section class="c-course__description horizontally-center">
-            <article>
+        <section class="c-course__header-wrapper">
+            <article class="c-course__header">
+                <div class="c-course__header__main o-horizontally-center">
+                    <p>Начинаещ</p>
+                    <h1>Първи стъпки в програмирането - част 2</h1>
+                </div>
+            </article>
+            <article class="c-registration">
+                <div class="c-registration__button">
+                    <button class="btn btn--secondary">записване</button>
+                </div>
+                <div class="c-registration__border c-dotted-line c-dotted-line--transparent"></div>
+                <ul class="c-registration__list">
+                    <li class="c-registration__list__item">
+                        <img src="./assets/icons/money.svg" alt="">
+                        <p class="u-p18 u-bold">цена</p>
+                        <h4 class="u-heading-secondary">500 лв.</h4>
+                    </li>
+                    <li class="c-registration__list__item">
+                        <img src="./assets/icons/people.svg" alt="">
+                        <p class="u-p18 u-bold">подходящ за</p>
+                        <h4 class="u-heading-secondary">1-6 клас</h4>
+                    </li>
+                    <li class="c-registration__list__item">
+                        <img src="./assets/icons/calendar.svg" alt="">
+                        <p class="u-p18 u-bold">начало</p>
+                        <h4 class="u-heading-secondary">16 май 2020</h4>
+                    </li>
+                    <li class="c-registration__list__item">
+                        <img src="./assets/icons/location.svg" alt="">
+                        <p class="u-p18 u-bold">локация</p>
+                        <h4 class="u-heading-secondary">гр. София</h4>
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <section class="c-course__description o-horizontally-center">
+            <article class="c-course__description__main">
                 <p>Това е втора част към онлайн обучението „Първи стъпки в програмирането”, който е първият и
                     основополагащ онлайн модул по време на обучението по програмиране на SoftUni Kids. Той е насочен към
                     изграждане на основни компетенции и умения, необходими на децата, за да продължат обучението си в
@@ -83,11 +113,12 @@
                     презентацията на създадената от децата им програма! След завършване на втората част от курса, децата
                     получават и своите сертификати за успешно преминато първо ниво „Първи стъпки в програмирането“. </p>
             </article>
-            <article class="c-course__description__video-wrapper">
-                <img src="./assets/images/video-img.png" alt="">
+            <article class="c-course__description__video">
+                <img class="c-course__description__video__img" src="./assets/images/video.jpg" alt="">
+                <img class="c-course__description__video__trigger" src="./assets/icons/play.svg" alt="">
             </article>
         </section>
-        <section class="c-course__requirements horizontally-center">
+        <section class="c-course__requirements o-horizontally-center">
             <article class="o-card">
                 <img class="o-card__icon" src="./assets/icons/people.svg" alt="">
                 <h2 class="o-card__title">За кого е подходящ?</h2>
@@ -96,7 +127,9 @@
                         четат и пишат и да имат достъп до компютър с интернет връзка.</p>
                 </div>
             </article>
-            <!-- <img src="./assets/common/border.svg" alt=""> -->
+            <section class="c-dotted-line-wrapper">
+                <div class="c-dotted-line c-dotted-line--secondary-100"></div>
+            </section>
             <article class="o-card">
                 <img class="o-card__icon" src="./assets/icons/notification.svg" alt="">
                 <h2 class="o-card__title">Важно!</h2>
@@ -108,7 +141,8 @@
             </article>
         </section>
         <div class="c-course__program-wrapper">
-            <section class="c-course__program horizontally-center">
+            <div class="c-dotted-line c-dotted-line--upper"></div>
+            <section class="c-course__program o-horizontally-center">
                 <article class="c-course__program__main o-card">
                     <img class="o-card__icon" src="./assets/icons/book.svg" alt="">
                     <h2 class="o-card__title">Програма на обучението</h2>
@@ -116,29 +150,33 @@
                         <p>През цялото време на курса ще имаме постоянна двустранна комуникация с децата. Ще имат
                             възможност да ни задават въпроси и да общуват помежду си (най-вече в почивките и след
                             занятия). Ще се забавляваме докато учим как да прогамираме.</p>
-                        <p><strong>занятия</strong></p>
-                        <div class="o-option">
-                            <p>1. Цикли и безкрайни цикли</p>
-                            <img src="./assets/icons/arrow_down.svg" alt="">
-                        </div>
-                        <div class="o-option">
-                            <p>2. Събития</p>
-                            <img src="./assets/icons/arrow_down.svg" alt="">
-                        </div>
-                        <div class="o-option">
-                            <p>3. Презентационни умения. Създаване на цялостен сценарий в Scratch.</p>
-                            <img src="./assets/icons/arrow_down.svg" alt="">
-                        </div>
-                        <div class="o-option">
-                            <p>4. Работа по финален проект и презентирането му.</p>
-                            <img src="./assets/icons/arrow_down.svg" alt="">
-                        </div>
+                        <section class="o-select">
+                            <p class="o-select__title"><strong>занятия</strong></p>
+                            <div class="o-select__option">
+                                <p>1. Цикли и безкрайни цикли</p>
+                                <img src="./assets/icons/arrow_down.svg" alt="">
+                            </div>
+                            <div class="o-select__option">
+                                <p>2. Събития</p>
+                                <img src="./assets/icons/arrow_down.svg" alt="">
+                            </div>
+                            <div class="o-select__option">
+                                <p>3. Презентационни умения. Създаване на цялостен сценарий в Scratch.</p>
+                                <img src="./assets/icons/arrow_down.svg" alt="">
+                            </div>
+                            <div class="o-select__option">
+                                <p>4. Работа по финален проект и презентирането му.</p>
+                                <img src="./assets/icons/arrow_down.svg" alt="">
+                            </div>
+                        </section>
                     </div>
                 </article>
-                <img class="c-course__program__img" src="./assets/icons/program.svg" alt="">
+                <img class="c-course__program__img o-hidden-max-tablet-portrait-up" src="./assets/icons/program.svg"
+                    alt="">
             </section>
+            <div class="c-dotted-line c-dotted-line--bottom"></div>
         </div>
-        <section class="c-course__certificate horizontally-center">
+        <!-- <section class="c-course__certificate o-horizontally-center o-hidden-max-tablet-portrait-up">
             <article class="c-course__certificate__descripton o-card">
                 <img class="o-card__icon" src="./assets/icons/reward.svg" alt="">
                 <h2 class="o-card__title">Сертификат</h2>
@@ -150,8 +188,8 @@
             <article class="c-course__certificate__image-wrapper">
                 <p>Снимка на сертификата</p>
             </article>
-        </section>
-        <section class="c-course__more-info horizontally-center">
+        </section> -->
+        <section class="c-course__more-info o-horizontally-center">
             <article class="o-card">
                 <img class="o-card__icon" src="./assets/icons/clock.svg" alt="">
                 <h2 class="o-card__title">Кога и къде се провеждат занятията?</h2>
@@ -167,7 +205,9 @@
                     <p><strong>Крайният срок за записване е 05/06/2020, 23:59 часа включително.</strong></p>
                 </div>
             </article>
-            <!-- <img src="./assets/common/border.svg" alt=""> -->
+            <section class="c-dotted-line-wrapper">
+                <div class="c-dotted-line c-dotted-line--secondary-100"></div>
+            </section>
             <article class="o-card">
                 <img class="o-card__icon" src="./assets/icons/innovation.svg" alt="">
                 <h2 class="o-card__title">Допълнителна информация</h2>
