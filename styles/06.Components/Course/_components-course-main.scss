@@ -1,6 +1,12 @@
 @import "../../01.Settings/settings-colors";
 @import "../../01.Settings/settings-breakpoints";
 
+%rows {
+    display: grid;
+    grid-template-rows: min-content min-content;
+    row-gap: 32px;
+}
+
 .c-course {
     display: grid;
     grid-template-rows: min-content min-content min-content min-content min-content;
@@ -36,7 +42,7 @@
                     max-width: 644px;
                     font-weight: bold;
                     font-size: 30px;
-                    line-height: 36px;
+                    line-height: 36px;  
                 }
             }
         }
@@ -50,9 +56,12 @@
     }
 
     &__description {
-        display: grid;
-        grid-template-rows: min-content min-content;
-        row-gap: 32px;
+        @extend %rows;
+
+        @include for-desktop-up {
+            grid-template-columns: 1fr min-content;
+            column-gap: 110px;
+        }
 
         &__main {
             display: grid;
@@ -67,6 +76,15 @@
             border-radius: 12px;
             overflow: hidden;
             position: relative;
+
+            @include for-tablet-landscape-up {                
+                width: 440px;
+                height: 248px;
+            }
+
+            @include for-desktop-up {
+                align-self: center;
+            }
 
             &__trigger {
                 position: absolute;
@@ -83,27 +101,90 @@
     }
 
     &__requirements {
-        display: grid;
-        grid-template-rows: min-content;
-        row-gap: 32px;
+        @extend %rows;
+
+        @include for-tablet-landscape-up {                
+            grid-template-columns: 1fr 10px 1fr;
+            column-gap: 90px;
+    
+            &__border {
+                height: 100%;
+
+                .c-dotted-line {
+                    height: 100%;
+                }
+            }
+        }
     }
 
     &__program-wrapper {
         background-color: #FFCB29;
 
-        .c-course__program__main {
-            display: grid;
-            grid-template-rows: min-content min-content;
-            row-gap: 32px;
+        .c-course__program {    
             margin-top: 64px;
-            margin-bottom: 64px;
-        }
+            margin-bottom: 64px; 
+            
+            &__program__main {
+                display: grid;
+                grid-template-rows: min-content min-content;
+                row-gap: 32px;
+            }
+
+            @include for-desktop-up {
+                display: grid;
+                grid-template-columns: 1fr 420px;
+                column-gap: 135px;
+
+                &__img {
+                    align-self: end;
+                }
+            }
+        }        
     }  
+
+    &__certificate {
+
+        @include for-tablet-landscape-up {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 64px;            
+            margin-bottom: 44px;
+
+            &__descripton {
+                align-self: center;
+            }
+
+            &__image-wrapper {
+                justify-self: center;
+                height: 256px;
+                width: 363px;
+                margin-left: 96px;
+                background: $grey-300;
+                box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
+                border-radius: 12px;                
+                color: $grey-700;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
     
     &__more-info {
-        display: grid;
-        grid-template-rows: min-content;
-        row-gap: 32px;
+        @extend %rows;
         margin-bottom: 96px;
+
+        @include for-desktop-up {                
+            grid-template-columns: 1fr 10px 1fr;
+            column-gap: 32px;
+    
+            &__border {
+                height: 100%;
+
+                .c-dotted-line {
+                    height: 100%;
+                }
+            }
+        }
     }
 }
