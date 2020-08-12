@@ -664,6 +664,15 @@ a:hover {
       grid-template-columns: 1fr 335px 1fr;
 }
 
+@media (min-width: 1440px) {
+  .c-course__header-wrapper {
+    -ms-grid-rows: 242px 56px 56px;
+        grid-template-rows: 242px 56px 56px;
+    -ms-grid-columns: 1fr 1290px 1fr;
+        grid-template-columns: 1fr 1290px 1fr;
+  }
+}
+
 .c-course__header-wrapper .c-course__header {
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
@@ -696,10 +705,18 @@ a:hover {
 }
 
 .c-course__header-wrapper .c-course__header__main h1 {
-  max-width: 644px;
   font-weight: bold;
   font-size: 30px;
   line-height: 36px;
+}
+
+@media (min-width: 600px) {
+  .c-course__header-wrapper .c-course__header__main h1 {
+    max-width: 644px;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+  }
 }
 
 .c-course__header-wrapper .c-registration {
@@ -878,11 +895,20 @@ a:hover {
 .c-registration {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 144px auto 406px;
-      grid-template-rows: 144px auto 406px;
+  -ms-grid-rows: 144px 20px 406px;
+      grid-template-rows: 144px 20px 406px;
   -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: 12px;
+}
+
+@media (min-width: 1440px) {
+  .c-registration {
+    -ms-grid-columns: 280px 20px 1fr;
+        grid-template-columns: 280px 20px 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+  }
 }
 
 .c-registration__button {
@@ -904,6 +930,20 @@ a:hover {
       align-self: center;
 }
 
+@media (min-width: 1440px) {
+  .c-registration__button button {
+    padding: 14px 32px;
+  }
+}
+
+.c-registration__border {
+  height: 100%;
+}
+
+.c-registration__border .c-dotted-line {
+  height: 100%;
+}
+
 .c-registration__list {
   display: -ms-grid;
   display: grid;
@@ -911,6 +951,17 @@ a:hover {
       grid-template-rows: auto;
   background: #FFFFFF;
   padding-left: 24px;
+}
+
+@media (min-width: 1440px) {
+  .c-registration__list {
+    -ms-grid-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto auto;
+    -webkit-column-gap: 32px;
+            column-gap: 32px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
 }
 
 .c-registration__list__item {
@@ -924,6 +975,12 @@ a:hover {
   row-gap: 6px;
   -webkit-column-gap: 24px;
           column-gap: 24px;
+}
+
+@media (min-width: 1440px) {
+  .c-registration__list__item {
+    padding-right: 32px;
+  }
 }
 
 .c-registration__list__item img {
@@ -952,6 +1009,18 @@ a:hover {
   position: absolute;
   left: 0;
   bottom: 0;
+}
+
+@media (min-width: 1440px) {
+  .c-registration__list__item:not(:last-child)::after {
+    width: 2px;
+    height: 24px;
+    left: unset;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
 }
 
 .c-trainers {
@@ -1566,7 +1635,7 @@ a:hover {
 }
 
 .c-dotted-line--transparent {
-  background: radial-gradient(circle 12px, transparent, transparent 40%, #C4C4C4 60%, #fff 60%, #fff 100%) 37px 0px/20px 20px repeat;
+  background: radial-gradient(circle 12px, transparent, transparent 40%, #C4C4C4 60%, #fff 60%, #fff 100%) 40px 1px/20px 22px repeat;
 }
 
 .c-dotted-line--upper {

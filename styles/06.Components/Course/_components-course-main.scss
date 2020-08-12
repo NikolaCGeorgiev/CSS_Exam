@@ -17,6 +17,11 @@
         grid-template-rows: 242px 56px 506px;
         grid-template-columns: 1fr 335px 1fr;
 
+        @include for-mid-desktop-up {
+            grid-template-rows: 242px 56px 56px;
+            grid-template-columns: 1fr 1290px 1fr;
+        }
+
         .c-course__header {
             grid-row: 1 / span 2;
             grid-column: 1 / span 3;
@@ -39,10 +44,16 @@
                 }
 
                 h1 {
-                    max-width: 644px;
                     font-weight: bold;
                     font-size: 30px;
                     line-height: 36px;  
+
+                    @include for-tablet-portrait-up {                        
+                        max-width: 644px;
+                        font-weight: 600;
+                        font-size: 36px;
+                        line-height: 44px;
+                    }
                 }
             }
         }
