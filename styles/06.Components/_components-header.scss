@@ -2,13 +2,12 @@
 
 .header-wrapper {
     position: relative;  
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 1px 5px rgba(0, 0, 0, 0.2);  
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 1px 5px rgba(0, 0, 0, 0.2);
 }
 
 .header {
     display: grid;
     grid-template-columns: auto 1fr auto;
-    grid-template-rows: 74px;
     justify-items: center;
 
     &__logo {
@@ -26,40 +25,59 @@
         }
     }
 
-    &__navbar {
+    &__navbar-horizontal {
+
         @include for-tablet-landscape-up {
             display: grid;
             grid-template-columns: auto;
             justify-self: end;
-            align-content: center;
-
+            align-content: center;                
+            margin-right: 44px;
+    
             .navbar__items {
                 display: grid;
-                grid-template-columns: auto auto auto auto auto 32px;
+                grid-template-columns: auto auto auto auto auto;
                 column-gap: 32px;
 
                 @include for-desktop-up {
-                    grid-template-columns: auto auto auto auto auto 48px;
+                    grid-template-columns: auto auto auto auto auto;
                     column-gap: 48px;
                 }
             }
-        }
+        }  
     }
 
     &__login {
         display: grid;
-        grid-template-columns: 1fr 24px;
-        column-gap: 14px;
+        grid-template-columns: auto auto;
+        column-gap: 24px;
         align-items: center;
         justify-self: end;
 
-        button {                
+        button {     
+            margin: 19px auto;           
             font-size: 13px;
             line-height: 16px;
         }
+    }
+}
 
-        @include for-tablet-landscape-up {
-            grid-template-columns: 1fr;
-        }
+.navbar-vertical {
+    display: none;
+    margin-bottom: 24px;
+
+    &__items {
+        display: grid;
+        grid-template-rows: auto;
+        row-gap: 24px;
+
+        .navbar__item {
+            padding-top: 24px;             
+            border-top: 3px dotted $grey-300;
+        }  
+    }
+
+    @include for-tablet-landscape-up {
+        display: none !important;        
     }
 }
