@@ -402,11 +402,6 @@ a:hover {
   justify-items: center;
 }
 
-.o-trainer-card__main__title {
-  color: #41BEAD;
-  font-weight: bold;
-}
-
 .o-trainer-card__main__position {
   font-style: normal;
   font-weight: 500;
@@ -1785,12 +1780,16 @@ a:hover {
   font-weight: bold;
 }
 
-.u-heading-secondary {
-  color: #FF9100;
-}
-
 .u-p18 {
   font-size: 18px;
   line-height: 22px;
+}
+
+.u-primary {
+  color: #41BEAD;
+}
+
+.u-secondary {
+  color: #FF9100;
 }
 /*# sourceMappingURL=styles.css.map */
