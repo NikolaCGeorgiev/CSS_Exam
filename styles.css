@@ -234,7 +234,7 @@ summary {
 
 @font-face {
   font-family: 'Lato';
-  src: url("../assets/fonts/latoregular.woff2") format("woff2"), url("../assets/fonts/latoregular.woff") format("woff");
+  src: url("../../assets/fonts/latoregular.woff2") format("woff2"), url("../../assets/fonts/latoregular.woff") format("woff");
 }
 
 html, * {
@@ -1499,6 +1499,66 @@ a:hover {
       justify-self: start;
 }
 
+@-webkit-keyframes wobble-hor-bottom {
+  0%,
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+  }
+  15% {
+    -webkit-transform: translateX(-30px) rotate(-6deg);
+            transform: translateX(-30px) rotate(-6deg);
+  }
+  30% {
+    -webkit-transform: translateX(15px) rotate(6deg);
+            transform: translateX(15px) rotate(6deg);
+  }
+  45% {
+    -webkit-transform: translateX(-15px) rotate(-3.6deg);
+            transform: translateX(-15px) rotate(-3.6deg);
+  }
+  60% {
+    -webkit-transform: translateX(9px) rotate(2.4deg);
+            transform: translateX(9px) rotate(2.4deg);
+  }
+  75% {
+    -webkit-transform: translateX(-6px) rotate(-1.2deg);
+            transform: translateX(-6px) rotate(-1.2deg);
+  }
+}
+
+@keyframes wobble-hor-bottom {
+  0%,
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+  }
+  15% {
+    -webkit-transform: translateX(-30px) rotate(-6deg);
+            transform: translateX(-30px) rotate(-6deg);
+  }
+  30% {
+    -webkit-transform: translateX(15px) rotate(6deg);
+            transform: translateX(15px) rotate(6deg);
+  }
+  45% {
+    -webkit-transform: translateX(-15px) rotate(-3.6deg);
+            transform: translateX(-15px) rotate(-3.6deg);
+  }
+  60% {
+    -webkit-transform: translateX(9px) rotate(2.4deg);
+            transform: translateX(9px) rotate(2.4deg);
+  }
+  75% {
+    -webkit-transform: translateX(-6px) rotate(-1.2deg);
+            transform: translateX(-6px) rotate(-1.2deg);
+  }
+}
+
 .footer-wrapper {
   position: relative;
   background-color: #565656;
@@ -1533,6 +1593,10 @@ a:hover {
   .c-footer__img__pawn {
     position: absolute;
     bottom: 0;
+  }
+  .c-footer__img__pawn:hover {
+    -webkit-animation: wobble-hor-bottom 0.8s both;
+            animation: wobble-hor-bottom 0.8s both;
   }
 }
 
@@ -1679,6 +1743,8 @@ a:hover {
   color: #565656;
   display: block;
   width: 100%;
+  -webkit-transition: color 0.4s ease-out;
+  transition: color 0.4s ease-out;
 }
 
 .header-link:hover {
@@ -1690,6 +1756,8 @@ a:hover {
   font-size: 16px;
   line-height: 19px;
   color: #E6E6E6;
+  -webkit-transition: color 0.4s ease-out;
+  transition: color 0.4s ease-out;
 }
 
 .footer-link:hover {
@@ -1698,6 +1766,11 @@ a:hover {
 
 .footer-icon:hover path {
   fill: #41BEAD;
+}
+
+.c-underline {
+  text-decoration: underline;
+  color: #FF9100;
 }
 
 .u-bold {

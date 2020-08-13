@@ -8,6 +8,7 @@
     color: $grey-700;
     display: block;
     width: 100%;   
+    transition: color 0.4s ease-out;
 
     &:hover {
         color: $secondary-800;
@@ -19,6 +20,7 @@
     font-size: 16px;
     line-height: 19px;
     color: $grey-200; 
+    transition: color 0.4s ease-out;
 
     &:hover {
         color: $primary-300;
@@ -27,4 +29,9 @@
 
 .footer-icon:hover path {
     fill: $primary-300;
+}
+
+.c-underline {
+    text-decoration: underline;
+    color: $secondary-800;
 }

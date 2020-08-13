@@ -1,4 +1,5 @@
 @import "../../01.Settings/settings-colors";
+@import "../../01.Settings/settings-animations";
 
 .footer-wrapper {
     position: relative;
@@ -30,6 +31,10 @@
             &__pawn{                
                 position: absolute;
                 bottom: 0;
+
+                &:hover {
+                    animation: wobble-hor-bottom 0.8s both;
+                }
             }
         }
     }
