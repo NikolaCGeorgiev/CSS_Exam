@@ -13,6 +13,11 @@
     &:hover {
         color: $secondary-800;
     }
+
+    &--vertical:hover {
+        transform: translateX(30px);
+        transition: transform 0.6s ease-in-out;
+    }
 }
 
 .footer-link {

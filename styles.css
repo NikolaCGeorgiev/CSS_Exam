@@ -1751,6 +1751,15 @@ a:hover {
   color: #FF9100;
 }
 
+.header-link--vertical:hover {
+  -webkit-transform: translateX(30px);
+          transform: translateX(30px);
+  -webkit-transition: -webkit-transform 0.6s ease-in-out;
+  transition: -webkit-transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
+}
+
 .footer-link {
   font-weight: normal;
   font-size: 16px;
