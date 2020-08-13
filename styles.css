@@ -477,33 +477,27 @@ a:hover {
 .o-select__option {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 44px;
-      grid-template-columns: 1fr 44px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-grid-columns: min-content 1fr 46px;
+      grid-template-columns: -webkit-min-content 1fr 46px;
+      grid-template-columns: min-content 1fr 46px;
+  -webkit-column-gap: 5px;
+          column-gap: 5px;
+  padding: 14px 0 14px 14px;
   background: #FFFFFF;
   border: none;
   border-radius: 6px;
-  min-width: 335px;
-  min-height: 52px;
   color: #565656;
 }
 
-.o-select__option p {
-  padding-left: 14px;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 22px;
-}
-
-.o-select__option img {
+.o-select__option__arrow {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
-.o-select__option:hover {
+.o-select__option__arrow:hover {
   cursor: pointer;
 }
 
