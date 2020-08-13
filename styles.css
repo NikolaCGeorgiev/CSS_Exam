@@ -754,6 +754,8 @@ a:hover {
         grid-template-columns: 1fr min-content;
     -webkit-column-gap: 110px;
             column-gap: 110px;
+    row-gap: unset;
+    margin-top: 32px;
   }
 }
 
@@ -810,6 +812,7 @@ a:hover {
         grid-template-columns: 1fr 10px 1fr;
     -webkit-column-gap: 90px;
             column-gap: 90px;
+    row-gap: unset;
   }
   .c-course__requirements__border {
     height: 100%;
@@ -900,6 +903,8 @@ a:hover {
         grid-template-columns: 1fr 10px 1fr;
     -webkit-column-gap: 32px;
             column-gap: 32px;
+    row-gap: unset;
+    margin-bottom: 160px;
   }
   .c-course__more-info__border {
     height: 100%;
@@ -1297,7 +1302,7 @@ a:hover {
       grid-template-rows: auto;
   row-gap: 48px;
   margin-top: 96px;
-  margin-bottom: 96px;
+  margin-bottom: 108px;
 }
 
 .c-contact-us__transport__header {
